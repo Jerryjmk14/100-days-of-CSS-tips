@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day07 Advanced selectors</title>
+    <style>
+      /* first child or direct decendant selector >*/
+      div > span {
+        background-color: red;
+      }
+      /* general selector */
+      span {
+        background-color: green;
+      }
+
+      /* sibling selector ~ it only selects siblings that come after because css reads our html from top to bottom*/
+      h2 ~ p {
+        background-color: goldenrod;
+      }
+
+      /* to get the first sibling use + sign */
+      div + p {
+        color: blue;
+      }
+
+      /* not selector */
+      p:not(.red) {
+        text-transform: uppercase;
+      }
+      /* attribute selector note the following: [type*="fa"] selects any attribute that contains fa. [typ^="fa"] must start with fa and [type$="fa"] must end with fa*/
+      input[type="text"] {
+        background-color: teal;
+      }
+      input[type^="ch"] {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Heading</h2>
+    <p class="red">Paragraph 1</p>
+    <p class="green">Paragraph 2</p>
+    <div>
+      <span>
+        Outer span
+        <span>Inner span</span>
+      </span>
+    </div>
+    <p class="red">Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <div>Div 2</div>
+    <p>Paragraph 5</p>
+    <input type="checkbox" />
+    <input type="text" />
+  </body>
+</html>
