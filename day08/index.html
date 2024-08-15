@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 08 Multicolumn layout</title>
+    <style>
+      .parent {
+        column-count: 3;
+        column-rule: 1px solid black;
+        gap: 1.5em;
+      }
+
+      h1 {
+        column-span: all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+      adipisci dolorum magni praesentium? Officia velit aspernatur tempora alias
+      iure nihil!
+      <hr />
+      <h1>Header</h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo culpa,
+      nesciunt mollitia blanditiis repellendus eligendi nostrum voluptates ipsam
+      facilis? Atque consequuntur aliquid at qui quia voluptatem magnam
+      voluptas? Dolore, autem.
+      <hr />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sunt ex sit
+      id placeat voluptates corrupti aspernatur odit amet harum.
+    </div>
+  </body>
+</html>
