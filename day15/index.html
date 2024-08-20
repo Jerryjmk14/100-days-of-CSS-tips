@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day15 Pseudo Elements</title>
+  </head>
+  <style>
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+    }
+
+    /* Note that pseudo elements have 2 semi-colons but pseudo classess have 1 semi-colon */
+    /* p::first-letter {
+      font-size: 200%;
+    } */
+
+    /* Using pseudo elements to add dynamic contents to our page. for a pseudo element to show on the page, there must be content in it */
+    .box::before {
+      display: block;
+      content: "";
+      width: 25px;
+      height: 25px;
+      background-color: goldenrod;
+    }
+    .box::after {
+      display: block;
+      content: attr(
+        data-text
+      ); /* using attribut to insert content dynamically*/
+      width: 25px;
+      height: 25px;
+      background-color: teal;
+    }
+  </style>
+  <body></body>
+  <div class="box" data-text="Hi"></div>
+</html>
