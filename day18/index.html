@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 18 Media Query</title>
+    <style>
+      div {
+        font-weight: bold;
+        font-size: 400%;
+        color: green;
+      }
+
+      @media (max-width: 300px) {
+        div {
+          color: blue;
+        }
+      }
+
+      @media (orientation: landscape) {
+        div {
+          color: indigo;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">Div</div>
+  </body>
+</html>
