@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Units</title>
+    <style>
+      .parent {
+        width: 200px;
+        border: 1px solid black;
+        font-size: 30px;
+      }
+
+      /* Pixel is always fixed regardless of its parent */
+      .item {
+        background-color: red;
+        /* height: 20px; */
+        margin: 5px 0;
+      }
+
+      /* Percent adjust always to the size of its parent */
+      .item-percent {
+        width: 50%;
+      }
+
+      /* View width adjust always to the size of the screen regardless of its parent */
+      .item-view-width {
+        width: 50vw;
+        height: 25vh;
+      }
+
+      /* Rem is based on root font size which is always the same*/
+      .rem {
+        font-size: 2rem;
+      }
+
+      /* em is based on parent font size*/
+      .em {
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="item item-percent">50 Percent</div>
+    <div class="item item-view-width">50 view</div> -->
+    <div class="item rem">1 REM</div>
+    <div class="item em">1 EM</div>
+
+    <div class="parent">
+      <div class="item rem">1 REM</div>
+      <div class="item em">1 EM</div>
+      <!-- <div class="item item-percent">50 Percent</div>
+      <div class="item item-view-width">50 view</div> -->
+    </div>
+  </body>
+</html>
